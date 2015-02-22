@@ -2,8 +2,13 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/vimfiles/bundle/Vundle.vim
-let path='~/vimfiles/bundle'
+if has('win32')
+    set rtp+=~/vimfiles/bundle/Vundle.vim
+    let path='~/vimfiles/bundle'
+else
+    set rtp+=~/.vim/bundle/Vundle.vim
+endif
+
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -16,7 +21,9 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-abolish'
+if has('python')
 Plugin 'SirVer/ultisnips'
+endif
 Plugin 'bling/vim-airline'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'https://github.com/vim-scripts/Wombat'
@@ -41,7 +48,12 @@ nnoremap <leader>w :w!<CR>
 nnoremap <leader>t :tabe 
 nnoremap <space> /\v
 
-colorscheme wombat
+if has('gui_running')
+    colorscheme wombat
+else
+    colorscheme default
+endif
+
 set bg=dark
 syntax on
 set guifont=Consolas:h13
@@ -63,4 +75,6 @@ let g:airline_theme='simple'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_section_x = '%{expand("%:p:h")}'
 " Ultisnips Setting
-let g:UltiSnipsUsePythonVersion = 2
+if has('python')
+    let g:UltiSnipsUsePythonVersion = 2
+endif
