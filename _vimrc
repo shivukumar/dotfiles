@@ -53,6 +53,7 @@ set nobackup
 set nu
 set nowrap
 set scrolloff=8
+set splitright
 
 let mapleader=","
 nnoremap <leader>w :w!<CR>
