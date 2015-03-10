@@ -96,6 +96,6 @@ au FileType make setlocal noexpandtab
 " Vim Airline configuration
 let g:airline_theme='simple'
 let g:airline#extensions#whitespace#enabled = 0
-let g:airline_section_x = '%{expand("%:p:h")}'
+let g:airline_section_x = '%{getcwd()}'
 " Ultisnips Setting
 let g:UltiSnipsUsePythonVersion = 2
