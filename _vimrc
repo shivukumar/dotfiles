@@ -53,11 +53,15 @@ set nobackup
 set nu
 set nowrap
 set scrolloff=8
+set splitright
 
 let mapleader=","
 nnoremap <leader>w :w!<CR>
 nnoremap <leader>t :tabe 
 nnoremap <space> /\v
+nnoremap <leader>s :s/\v
+nnoremap <leader>n :normal 
+nnoremap <leader>g :g/\v
 
 if has('gui_running')
     colorscheme wombat
