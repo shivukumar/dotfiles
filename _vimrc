@@ -9,10 +9,10 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-abolish'
-if has('python')
+if has('python3')
     Plugin 'SirVer/ultisnips'
 endif
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'vim-scripts/Wombat'
 Plugin 'tomasr/molokai'
@@ -40,8 +40,10 @@ set nu
 set nowrap
 set scrolloff=8
 set splitright
+
 " Nobackup at all
 set hidden
+set autoread
 set noswapfile
 set nobackup
 set nowritebackup
@@ -62,7 +64,9 @@ else
 endif
 set laststatus=2
 set winaltkeys=yes
-set guioptions-=lrT
+set guioptions-=l
+set guioptions-=r
+set guioptions-=T
 "}}}
 " Tab and space settings {{{
 set ts=4 sw=4 sts=4 expandtab
@@ -101,5 +105,6 @@ let g:airline_theme='simple'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_section_x = '%{getcwd()}'
 " Ultisnips Setting
-let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsUsePythonVersion = 3
 "}}}
+" vim:fen:fdm=marker

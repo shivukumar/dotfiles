@@ -1,0 +1,4 @@
+# Aliases
+alias c=clear
+alias g=gvim
+alias v=vim
