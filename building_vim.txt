@@ -1,0 +1,21 @@
+1) Edit /etc/apt/sources.list and uncomment deb-src lines
+2) sudo apt-get update
+3) sudo apt-get build-dep vim-gnome
+4) sudo apt-get remove vim-gnome vim-common vim-runtime
+5) ./configure --with-features=huge                                                       \
+               --enable-multibyte                                                         \
+               --enable-rubyinterp                                                        \
+               --enable-pythoninterp                                                      \
+               --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/       \
+               --enable-python3interp                                                     \
+               --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu/ \
+               --enable-perlinterp                                                        \
+               --enable-luainterp                                                         \
+               --enable-gui=gtk2                                                          \
+               --enable-cscope                                                            \
+               --prefix=/usr 
+6) make
+7) sudo make install
+
+Adding jedi support
+a) sudo pip install jedi

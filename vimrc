@@ -9,8 +9,9 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-abolish'
-if has('python3')
+if has('python')
     Plugin 'SirVer/ultisnips'
+    Plugin 'davidhalter/jedi-vim'
 endif
 Plugin 'vim-airline'
 Plugin 'nelstrom/vim-visual-star-search'
@@ -67,6 +68,7 @@ set winaltkeys=yes
 set guioptions-=l
 set guioptions-=r
 set guioptions-=T
+set guioptions-=L
 "}}}
 " Tab and space settings {{{
 set ts=4 sw=4 sts=4 expandtab
@@ -105,6 +107,12 @@ let g:airline_theme='simple'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_section_x = '%{getcwd()}'
 " Ultisnips Setting
-let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsUsePythonVersion = 2
 "}}}
+" List chars {{{
+set list
+set listchars=tab:▸\ ,eol:¬
+highlight NonText guibg=#242424 guifg=#404040
+highlight SpecialKey guibg=#242424 guifg=#404040
+" }}}
 " vim:fen:fdm=marker
