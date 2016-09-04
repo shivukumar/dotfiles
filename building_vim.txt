@@ -19,3 +19,15 @@
 
 Adding jedi support
 a) sudo pip install jedi
+
+################################################
+## Setting up vim in a new machine
+################################################
+
+1) mkdir -p ~/.vim/bundle/
+2) git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
+
+Launch vim and do
+1) :VundleInstall
+
+NOTE: Git installation required

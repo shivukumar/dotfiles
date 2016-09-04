@@ -78,6 +78,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 "}}}
 " Shortcuts {{{
+nnoremap <F2> :w!<CR>
 let mapleader=","
 " Superfast leader settings
 nnoremap <leader>w :w!<CR>
