@@ -11,6 +11,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-abolish'
 if has('python')
     Plugin 'SirVer/ultisnips'
+    Plugin 'honza/vim-snippets'
     Plugin 'davidhalter/jedi-vim'
 endif
 Plugin 'vim-airline'
@@ -73,6 +74,7 @@ set guioptions-=L
 " Tab and space settings {{{
 set ts=4 sw=4 sts=4 expandtab
 au FileType make setlocal noexpandtab
+au FileType tex setlocal linebreak textwidth=60
 set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
