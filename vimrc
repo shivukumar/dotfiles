@@ -31,6 +31,8 @@ set incsearch
 set ignorecase
 set smartcase
 set hls
+nnoremap * *N
+nnoremap # #n
 
 " Indentation settings
 set autoindent
@@ -117,5 +119,8 @@ set list
 set listchars=tab:▸\ ,eol:¬
 highlight NonText guibg=#242424 guifg=#404040
 highlight SpecialKey guibg=#242424 guifg=#404040
+" }}}
+" Tag option setting {{{
+set tags=./tags;
 " }}}
 " vim:fen:fdm=marker
