@@ -12,7 +12,7 @@ alias pc="python -c "
 alias py="python"
 alias ip="ipython"
 alias pq="ipython qtconsole"
-alias rsync="rsync -avz --progress"
+alias rsync="rsync -avrz --progress"
 
 
 # Environment variables
