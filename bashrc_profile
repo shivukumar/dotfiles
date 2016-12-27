@@ -7,7 +7,14 @@ alias quark='ssh spatil@quark.ecs.umass.edu'
 alias tls='tmux list-sessions'
 alias tn='tmux new-session -s'
 alias ta='tmux attach-session -t'
+alias vlsi='ssh -X spatil@vlsicad2.ecs.umass.edu'
+alias pc="python -c "
+alias py="python"
+alias ip="ipython"
+alias pq="ipython qtconsole"
+alias rsync="rsync -avrz --progress"
 
 
 # Environment variables
 export QUARK='spatil@quark.ecs.umass.edu'
+export VLSI="spatil@vlsicad2.ecs.umass.edu"
