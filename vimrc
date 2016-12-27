@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " Vundle plungin {{{
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-abolish'
 if has('python')
@@ -26,6 +26,8 @@ call vundle#end()
 filetype plugin indent on
 syntax on
 
+" Remember more history
+set history=1000
 " Search settings
 set incsearch
 set ignorecase
@@ -70,6 +72,10 @@ set guioptions-=l
 set guioptions-=r
 set guioptions-=T
 set guioptions-=L
+set guitablabel=\[%N\]\ %t\ %M
+"set guitablabel=%{expand('%:t')}
+" Remove error bells
+au GUIEnter * set t_vb= visualbell
 "}}}
 " Tab and space settings {{{
 set ts=4 sw=4 sts=4 expandtab
