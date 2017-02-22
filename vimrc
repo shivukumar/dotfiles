@@ -14,7 +14,9 @@ if has('python')
     Plugin 'honza/vim-snippets'
     Plugin 'davidhalter/jedi-vim'
 endif
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nelstrom/vim-visual-star-search'
 Plugin 'vim-scripts/Wombat'
 Plugin 'tomasr/molokai'
@@ -82,7 +84,7 @@ au GUIEnter * set t_vb= visualbell
 " Tab and space settings {{{
 set ts=4 sw=4 sts=4 expandtab
 au FileType make setlocal noexpandtab
-au FileType tex setlocal linebreak textwidth=60
+au FileType tex setlocal linebreak textwidth=72 spelllang=en_us spell
 set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -110,15 +112,17 @@ map j gj
 map k gk
 
 " Tag commands
-set tags=./tags/;
 "}}}
 " Plugin specific settings {{{
 " Vim Airline configuration
 let g:airline_theme='simple'
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_section_x = '%{getcwd()}'
+let g:ycm_extra_conf_globlist = ['./.ycm_extra_conf.py', '~/.ycm_extra_conf.py']
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " Ultisnips Setting
 let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsExpandTrigger = "<C-j>"
 "}}}
 " List chars {{{
 set list

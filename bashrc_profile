@@ -1,6 +1,7 @@
 # Aliases
 alias c=clear
 alias g=gvim
+alias gd="gvim -d"
 alias v=vim
 alias scp='scp -r'
 alias quark='ssh spatil@quark.ecs.umass.edu'

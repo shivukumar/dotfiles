@@ -1,0 +1,72 @@
+set nocompatible
+set nu
+set ts=4 sw=4 sts=4 expandtab
+set history=1000
+set hls incsearch ignorecase smartcase nowrap
+" Nobackup at all
+set noswapfile nobackup nowritebackup
+set hidden autoread
+
+au FileType,BufRead,BufNewFile make setlocal noexpandtab
+au FileType tex setlocal linebreak textwidth=72 spelllang=en_us spell
+" GUI settings
+au GUIEnter * set t_vb= visualbell
+set laststatus=2
+set winaltkeys=yes
+set guioptions-=l
+set guioptions-=r
+set guioptions-=T
+set guioptions-=L
+set guitablabel=\[%N\]\ %t\ %M
+
+set encoding=utf8
+set ffs=unix,dos,mac
+
+nnoremap <F2> :w!<CR>
+let mapleader=","
+" Superfast leader settings
+nnoremap <leader>w :w!<CR>
+nnoremap <leader>t :tabe 
+nnoremap <leader>s :s/\v
+nnoremap <leader>n :normal 
+nnoremap <leader>g :g/\v
+nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>
+nnoremap <space> /\v
+" Smart navigation between split windows
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
+
+" Easy up down between wraped lines
+map j gj
+map k gk
+
+set tags=./tags;
+set list
+set listchars=tab:▸\ ,eol:¬
+highlight NonText guibg=#242424 guifg=#404040
+highlight SpecialKey guibg=#242424 guifg=#404040
+
+nnoremap * *N
+nnoremap # #n
+
+" Indentation settings
+set autoindent smartindent
+set wildmenu
+set backspace=indent,eol,start
+set scrolloff=8
+set splitright
+
+" GUI settings {{{
+if has('gui_running')
+    colorscheme wombat
+else
+    colorscheme default
+endif
+set background=dark
+if has('win32')
+    set guifont=Consolas:h13
+else
+    set guifont=Ubuntu\ Mono\ 13
+endif
