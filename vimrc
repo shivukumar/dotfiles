@@ -9,12 +9,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-abolish'
-if has('python3')
+if has('python')
     Plugin 'SirVer/ultisnips'
     Plugin 'honza/vim-snippets'
     Plugin 'davidhalter/jedi-vim'
 endif
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nelstrom/vim-visual-star-search'
@@ -121,7 +121,7 @@ let g:airline_section_x = '%{getcwd()}'
 let g:ycm_extra_conf_globlist = ['./.ycm_extra_conf.py', '~/.ycm_extra_conf.py']
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 " Ultisnips Setting
-let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsUsePythonVersion = 2
 let g:UltiSnipsExpandTrigger = "<C-j>"
 "}}}
 " List chars {{{
