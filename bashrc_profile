@@ -16,6 +16,8 @@ alias pq="ipython qtconsole"
 alias rsync="rsync -avrz --progress"
 
 
+export TERM=xterm-256color
+
 # Environment variables
 export QUARK='spatil@quark.ecs.umass.edu'
 export VLSI="spatil@vlsicad2.ecs.umass.edu"

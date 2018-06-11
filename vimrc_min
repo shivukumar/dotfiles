@@ -57,14 +57,12 @@ set wildmenu
 set backspace=indent,eol,start
 set scrolloff=8
 set splitright
+set diffopt+=iwhite
 
-" GUI settings {{{
-if has('gui_running')
-    colorscheme wombat
-else
-    colorscheme default
-endif
+set t_Co=256
+colorscheme default
 set background=dark
+
 if has('win32')
     set guifont=Consolas:h13
 else

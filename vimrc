@@ -48,6 +48,7 @@ set nu
 set nowrap
 set scrolloff=8
 set splitright
+set diffopt+=iwhite
 
 " Nobackup at all
 set hidden
@@ -63,7 +64,9 @@ else
     colorscheme default
 endif
 
+set t_Co=256
 set background=dark
+
 syntax on
 if has('win32')
     set guifont=Consolas:h13
@@ -133,4 +136,20 @@ highlight SpecialKey guibg=#242424 guifg=#404040
 " Tag option setting {{{
 set tags=./tags;
 " }}}
+" Custom helper functions {{{
+let g:a = 0
+fu! Reset()
+    let g:a = 0
+endfu
+fu! Dec()
+    let val = g:a
+    let g:a -= 1
+    return val
+endfu
+fu! Inc()
+    let val = g:a
+    let g:a += 1
+    return val
+endfu
+"}}}
 " vim:fen:fdm=marker
